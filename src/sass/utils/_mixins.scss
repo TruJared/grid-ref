@@ -32,7 +32,7 @@
 }
 
 @mixin line-break(
-  $margin: $spacer * 0.5,
+  $margin: $spacer * 0.5 0,
   // currentColor == current text color
     $color: currentColor,
   $height: 2px,
@@ -41,7 +41,7 @@
   &::after {
     content: '';
     display: block;
-    margin: $margin auto;
+    margin: $margin;
     background: $color;
     height: $height;
     width: $width;
