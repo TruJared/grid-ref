@@ -1,0 +1,123 @@
+//  *  image effects  *  //
+// #region //
+// <div class="image__action image__action--rise-up">
+//   <img
+//     src="../images/Octocat.png"
+//     alt="octocat"
+//     class="image__action__image image__action--rise-up__image"
+//   />
+//   <div class="image__action__caption image__action--rise-up__caption">
+//     <h1 class="image__action__heading image__action--rise-up__heading">
+//       Push
+//     </h1>
+//     <p class="image__action__content image__action--rise-up__content">
+//       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto,
+//       aut! Accusamus alias explicabo atque modi necessitatibus qui,
+//       pariatur animi dolorum harum, rerum cumque at adipisci fugit eaque
+//       doloremque odio nam!
+//     </p>
+//   </div>
+// </div>
+// #endregion //
+
+.image__action {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  color: $white;
+  margin: $spacer * 2;
+  overflow: hidden;
+
+  &__image {
+    width: 100%;
+    padding: $spacer * 0.5;
+    transition: all 0.5s ease-in-out;
+  }
+
+  &__caption {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(rgba(grey(5), 0.75), rgba(grey(5), 0.75));
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  &__heading {
+    font-weight: $fw-1;
+    text-transform: capitalize;
+    padding: 0 $spacer;
+    font-size: $base-font-size * 2.75;
+    text-align: center;
+    margin: 0;
+  }
+
+  &__content {
+    padding: 0 $spacer * 4;
+    text-align: center;
+  }
+
+  &--back-up {
+    &__caption {
+      transition: all 0.5s ease-in-out;
+      opacity: 0;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+    &:hover img {
+      transform: scale(0.5) rotate(10deg);
+    }
+  }
+
+  &--swipe {
+    &__caption {
+      transition: all 0.5s ease-in-out;
+      transform: translateX(-100%);
+    }
+
+    &:hover &__caption {
+      transform: translateX(0);
+    }
+
+    &:hover img {
+      transform: scale(0.5) rotate(-10deg);
+    }
+  }
+
+  &--push {
+    &__caption {
+      transition: all 0.5s ease-in-out;
+      background: $black;
+      transform: translateX(-100%);
+    }
+
+    &:hover &__caption {
+      transform: translateX(0);
+    }
+
+    &:hover img {
+      transform: translateX(100%);
+    }
+  }
+
+  &--rise-up {
+    &__caption {
+      transition: all 0.5s ease-in-out;
+      background: $black;
+      transform: translateY(100%);
+    }
+
+    &:hover &__caption {
+      transform: translateY(0);
+    }
+
+    &:hover img {
+      transform: translateY(-100%);
+    }
+  }
+}

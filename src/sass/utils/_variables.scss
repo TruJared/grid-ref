@@ -1,0 +1,32 @@
+// named colors
+$white: #fff;
+$black: #000;
+
+$palette: (
+  primary: #362a58,
+  secondary: #fe125c,
+  accent: #8e8b9f,
+  highlight: #f6ac91,
+  base-font-color: #111,
+  background: #fffffa
+);
+
+$greys: (
+  0: $white,
+  1: darken($white, 33%),
+  2: darken($white, 50%),
+  3: darken($white, 75%),
+  4: darken($white, 80%),
+  5: darken($white, 100%)
+);
+
+$breakpoints: (
+  xs: 349px,
+  sm: 499px,
+  md: 699px,
+  lg: 999px,
+  xl: 1199px,
+  xxl: 1499px
+);
+
+$spacer: 1rem;
