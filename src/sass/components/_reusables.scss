@@ -65,11 +65,13 @@
       transition: all 0.5s ease-in-out;
       opacity: 0;
 
-      &:hover {
+      &:hover,
+      &:active {
         opacity: 1;
       }
     }
-    &:hover img {
+    &:hover img,
+    &:active img {
       transform: scale(0.5) rotate(10deg);
     }
   }
@@ -80,11 +82,13 @@
       transform: translateX(-100%);
     }
 
-    &:hover &__caption {
+    &:hover &__caption,
+    &:active &__caption {
       transform: translateX(0);
     }
 
-    &:hover img {
+    &:hover img,
+    &:active img {
       transform: scale(0.5) rotate(-10deg);
     }
   }
@@ -96,11 +100,13 @@
       transform: translateX(-100%);
     }
 
-    &:hover &__caption {
+    &:hover &__caption,
+    &:active &__caption {
       transform: translateX(0);
     }
 
-    &:hover img {
+    &:hover img,
+    &:active img {
       transform: translateX(100%);
     }
   }
@@ -112,11 +118,13 @@
       transform: translateY(100%);
     }
 
-    &:hover &__caption {
+    &:hover &__caption,
+    &:active &__caption {
       transform: translateY(0);
     }
 
-    &:hover img {
+    &:hover img,
+    &:active img {
       transform: translateY(-100%);
     }
   }
