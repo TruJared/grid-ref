@@ -1,16 +1,19 @@
 // based on https://gist.github.com/paulirish/12fb951a8b893a454b32
 
-exports.$ = document.querySelector.bind(document);
-exports.$$ = document.querySelectorAll.bind(document);
+export const $ = document.querySelector.bind(document);
+export const $$ = document.querySelectorAll.bind(document);
 
-Node.prototype.on = window.on = function (name, fn) {
+Node.prototype.on = window.on = function(name, fn) {
   this.addEventListener(name, fn);
 };
 
 NodeList.prototype.__proto__ = Array.prototype; // eslint-disable-line
 
-NodeList.prototype.on = NodeList.prototype.addEventListener = function (name, fn) {
-  this.forEach((elem) => {
+NodeList.prototype.on = NodeList.prototype.addEventListener = function(
+  name,
+  fn,
+) {
+  this.forEach(elem => {
     elem.on(name, fn);
   });
 };
