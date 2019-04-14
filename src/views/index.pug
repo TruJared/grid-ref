@@ -1,6 +1,5 @@
-<!DOCTYPE html>
-html(lang="en")
-  include includes/_head.pug
-  body
-    h1.test should be blue but click me and I'll be red
-    script(src="../javascripts/app.js")
+extends layout
+append content
+  h1.test click me for color change
+//- block content
+//-   p this is the default block (replaces default); you'll probably use this

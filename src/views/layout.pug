@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+  meta(charset="UTF-8")
+  meta(name="viewport", content="width=device-width, initial-scale=1.0")
+  meta(http-equiv="X-UA-Compatible", content="ie=edge")
+  title Boilerplate
+  link(rel="icon" type="image/png" href="../images/favicon.ico")
+  link(rel="stylesheet" href="../sass/main.scss")
+  body
+    block content
+      p default content inside the block - can be overwritten or <a href="https://pugjs.org/language/inheritance.html#block-append-prepend" target="_blank">appended</a>
+
+    p  ❕️❗️ - not inside the block - remove me
+    block scripts
+      script(type="text/javascript" src="../javascripts/app.js")

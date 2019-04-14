@@ -3,19 +3,19 @@
   "version": "1.0.0",
   "main": "index.html",
   "scripts": {
-    "build": "parcel build src/views/index.pug",
-    "build-static": "parcel build src/views/index.pug --public-url ./",
+    "build": "rm -rf dist/ && parcel build src/views/index.pug --public-url ./",
+    "build-no-public": "rm -rf dist/ && parcel build src/views/index.pug",
     "nuke": "rm node_modules/ -rf package-lock.json && npm install",
-    "start": "parcel ./src/views/index.pug"
+    "start": "rm -rf dist/ &&parcel ./src/views/index.pug --open"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^9.4.10",
-    "eslint": "^5.15.1",
+    "eslint": "^5.16.0",
     "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-import": "^2.17.1",
     "parcel-bundler": "^1.12.0",
     "pug": "^2.0.3",
     "sass": "^1.17.2"

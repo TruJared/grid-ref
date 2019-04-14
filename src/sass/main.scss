@@ -1,10 +1,7 @@
-@import 'base/reset';
+@import 'utils/normalize';
 @import 'utils/variables';
 @import 'utils/mixins';
-@import 'utils/functions';
-@import 'base/typography';
-@import 'components/buttons';
-@import 'components/animations';
-@import 'components/reusables';
-@import 'base/general';
-@import 'pages/index';
+@import 'utils/typography';
+@import 'utils/buttons';
+@import 'partials/globals';
+@import 'partials/index';

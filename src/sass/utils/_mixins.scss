@@ -50,11 +50,7 @@
 }
 
 @mixin backGrad($url: '') {
-  background: linear-gradient(
-      -45deg,
-      rgba(color(primary), 0.9),
-      rgba(color(primary), 0.9)
-    ),
+  background: linear-gradient(-45deg, rgba $primary, 0.9, rgba $primary, 0.9),
     url($url);
   background-size: contain;
   background-position: center, center;

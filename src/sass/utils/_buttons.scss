@@ -2,22 +2,25 @@
   height: 50px;
   width: 125px;
   margin: 25px;
-  background: $white;
+  background: white;
   border: none;
   border-radius: 5px;
-  color: color(base-font-color);
+  color: $base-font-color;
   text-transform: uppercase;
   box-shadow: 2px 2px 10px rgba(75, 75, 100, 0.8);
 
   &:hover,
   &:active {
-    color: $white;
+    color: white;
     outline: none;
     background: linear-gradient(
       45deg,
-      rgba(color(primary), 0.3),
-      rgba(color(primary), 0.9),
-      rgba(color(primary), 0.3)
+      rgba $primary,
+      0.3,
+      rgba $primary,
+      0.9,
+      rgba $primary,
+      0.3
     );
   }
 
@@ -63,15 +66,15 @@
   // * fancy * //
 
   &__fancy {
-    color: color(base-font-color);
+    color: $base-font-color;
     position: relative;
     overflow: hidden;
     transition: color 1s linear;
 
     &:hover,
     &:active {
-      background: $white;
-      color: color(primary);
+      background: white;
+      color: $primary;
     }
 
     &--wiper {
@@ -79,8 +82,8 @@
         content: '';
         background: linear-gradient(
           45deg,
-          rgba(color(secondary), 0.3),
-          rgba(color(secondary), 0.5)
+          rgba($secondary, 0.3),
+          rgba($secondary, 0.5)
         );
         position: absolute;
         top: 0;
@@ -103,8 +106,10 @@
         content: '';
         background: linear-gradient(
           45deg,
-          rgba(color(secondary), 0.3),
-          rgba(color(secondary), 0.5)
+          rgba $secondary,
+          0.3,
+          rgba $secondary,
+          0.5
         );
         position: absolute;
         top: 0;
@@ -124,7 +129,7 @@
     &--toaster {
       &:before {
         content: 'Click Me!';
-        background: color(base-font-color);
+        background: $base-font-color;
         position: absolute;
         top: 0;
         left: 0;
@@ -139,7 +144,7 @@
 
       &:hover,
       &:active {
-        color: color(background);
+        color: $background;
       }
 
       &:hover:before,
@@ -154,8 +159,10 @@
         content: '';
         background: linear-gradient(
           45deg,
-          rgba(color(secondary), 0.1),
-          rgba(color(secondary), 0.3)
+          rgba secondary,
+          0.1,
+          rgba secondary,
+          0.3
         );
         position: absolute;
         top: 0;
@@ -190,8 +197,10 @@
         content: '';
         background: linear-gradient(
           45deg,
-          rgba(color(secondary), 0.1),
-          rgba(color(secondary), 0.3)
+          rgba $secondary,
+          0.1,
+          rgba $secondary,
+          0.3
         );
         position: absolute;
         bottom: 0;
@@ -215,8 +224,10 @@
         content: '';
         background: linear-gradient(
           45deg,
-          rgba(color(secondary), 0.1),
-          rgba(color(secondary), 0.5)
+          rgba secondary,
+          0.1,
+          rgba secondary,
+          0.5
         );
         position: absolute;
         top: 0;
@@ -254,10 +265,12 @@
       &:active:before {
         background: linear-gradient(
           45deg,
-          rgba(color(secondary), 0.1),
-          rgba(color(secondary), 0.5)
+          rgba $secondary,
+          0.1,
+          rgba $secondary,
+          0.5
         );
-        color: color(base-font-color);
+        color: base-font-color;
         transform: scale(0);
       }
     }

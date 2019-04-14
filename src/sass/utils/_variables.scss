@@ -1,24 +1,18 @@
-// named colors
-$white: #fff;
-$black: #000;
+// palette
+$primary: #362a58;
+$secondary: #fe125c;
+$accent: #8e8b9f;
+$highlight: #f6ac91;
+$base-font-color: #111;
+$background: #fffffa;
 
-$palette: (
-  primary: #362a58,
-  secondary: #fe125c,
-  accent: #8e8b9f,
-  highlight: #f6ac91,
-  base-font-color: #111,
-  background: #fffffa
-);
-
-$greys: (
-  0: $white,
-  1: darken($white, 33%),
-  2: darken($white, 50%),
-  3: darken($white, 75%),
-  4: darken($white, 80%),
-  5: darken($white, 100%)
-);
+// greys
+$grey-0: darken(white, 5%);
+$grey-1: darken(white, 15%);
+$grey-2: darken(white, 25%);
+$grey-3: darken(white, 35%);
+$grey-4: darken(white, 50%);
+$grey-5: darken(white, 80%);
 
 $breakpoints: (
   xs: 349px,
@@ -26,7 +20,7 @@ $breakpoints: (
   md: 699px,
   lg: 999px,
   xl: 1199px,
-  xxl: 1499px
+  xxl: 1499px,
 );
 
 $spacer: 1rem;
