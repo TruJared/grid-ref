@@ -1,4 +1,67 @@
-// ! delete me ! //
-.test {
-  color: blue;
+.body {
+  background: floralwhite;
+  height: 100%;
+  width: 100%;
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+  border: 1px solid red;
+  background: papayawhip;
+
+  display: grid;
+  grid-template-columns: repeat(2, 150px) auto repeat(2, 150px);
+  grid-template-rows: 1fr 2fr 1fr;
+  .box {
+    border: 5px solid peru;
+    height: 150px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      font-size: 3.5em;
+      color: white;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+    }
+
+    &--1 {
+      background: teal;
+    }
+    &--2 {
+      background: yellow;
+    }
+    &--3 {
+      background: purple;
+    }
+    &--4 {
+      background: deeppink;
+    }
+    &--5 {
+      background: dodgerblue;
+    }
+    &--6 {
+      background: orange;
+    }
+    &--7 {
+      background: slateblue;
+    }
+    &--8 {
+      background: darkslategray;
+    }
+    &--9 {
+      background: turquoise;
+    }
+    &--10 {
+      background: rebeccapurple;
+    }
+    &--11 {
+      background: #bada55;
+    }
+    &--12 {
+      background: #4c1d1c;
+    }
+  }
 }
