@@ -104,13 +104,13 @@ is the same as
 ```
 
 ❗️ if not interested in column/row names just use area names like:
+-- this syntax may be wrong - JT
 
 ```css
 .container {
-  grid-template:
-    'header header header' 25px
-    'footer footer footer' 25px
-    / auto 50px auto;
+  grid-template: auto 50px auto
+  / 'header header header' 25px
+    'footer footer footer' 25px   
 }
 ```
 
