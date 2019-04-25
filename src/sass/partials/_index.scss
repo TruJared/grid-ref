@@ -9,17 +9,27 @@
   width: 100%;
   border: 1px solid red;
   background: papayawhip;
+  padding: 15px;
 
   display: grid;
-  grid-template-columns: repeat(2, 150px) auto repeat(2, 150px);
-  grid-template-rows: 1fr 2fr 1fr;
+  grid-template:
+    'header header header' 1fr
+    'left body right' 1fr
+    'left body right' 1fr
+    'footer footer footer' 1fr
+    / auto;
+  gap: 15px;
+  place-items: center;
+  place-content: stretch;
+
   .box {
     border: 5px solid peru;
-    height: 150px;
-    width: 150px;
+    height: 100px;
+    width: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 25px;
 
     p {
       font-size: 3.5em;
